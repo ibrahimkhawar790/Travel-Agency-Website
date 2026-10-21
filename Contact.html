@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Travels</title>
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="CSS/Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="top-info">
+            <span><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</span>
+            <span class="divider">|</span>
+            <span><i class="far fa-clock"></i> Monay to Friday: 9:00 am - 5:00 pm</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+        <!-- Curved Logo Wrapper with Image Space -->
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Aura Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="destinations.html" class="nav-item">Destinations</a></li>
+            <li><a href="booking.html" class="nav-item">Booking</a></li>
+            <li><a href="contact.html" class="nav-item active">Contact</a></li>
+        </ul>
+        
+        <a href="booking.html" class="btn-book desktop-only">
+            <span>Book Now</span> 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Menu Icon -->
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>→</span> Contact Us
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Our Contact Information</h2>
+
+            <div class="contact-cards">
+                <!-- Address Card -->
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info">
+                        <h4>Our Address</h4>
+                        <p>1-Km Defence Rd, near Bhuptian Chowk, Lahore, Pakistan</p>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                    <div class="info">
+                        <h4>Phone Number</h4>
+                        <p>+92 300 1234567<br>+92 300 9876543</p>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <div class="info">
+                        <h4>Email Address</h4>
+                        <p>info@auratravels.com<br>support@auratravels.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-form-section">
+        <div class="form-container">
+            <h2 class="form-heading">Send Us a Message</h2>
+            <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                <div class="form-grid">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject" class="full-width">
+                <textarea placeholder="Your Message" rows="6"></textarea>
+                <button type="submit" class="btn-solid">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo-img">
+                    <img src="images/logo.png" alt="Aura Travels Logo">
+                </a>
+                <p class="brand-text">Crafting unforgettable journeys with luxury, expertise, and personalized care. We curate every detail to ensure your dream destination is just a seamless booking away.</p>
+                <div class="social-bar">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-heading">Navigate</h4>
+                <ul class="link-list">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 class="footer-heading">Connect</h4>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</div>
+                <div class="contact-item"><i class="fas fa-phone"></i> +92 300 1234567</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> info@auratravels.com</div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; 2026 Aura Travels. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

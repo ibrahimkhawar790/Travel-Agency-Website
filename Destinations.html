@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Aura Travels</title>
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="CSS/Destinations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-info">
+            <span><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</span>
+            <span class="divider">|</span>
+            <span><i class="far fa-clock"></i> Monday to Friday: 9:00 am - 5:00 pm</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Aura Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="destinations.html" class="nav-item active">Destinations</a></li>
+            <li><a href="booking.html" class="nav-item">Booking</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+        <a href="booking.html" class="btn-book desktop-only">
+            <span>Book Now</span> 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Destinations</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>→</span> Destinations
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Explore</span>
+                <h2 class="section-title">Our Destinations</h2>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="tab-item active" onclick="filterTours('all', this)">All</button>
+                <button class="tab-item" onclick="filterTours('europe', this)">Europe</button>
+                <button class="tab-item" onclick="filterTours('asia', this)">Asia</button>
+                <button class="tab-item" onclick="filterTours('middle-east', this)">Middle East</button>
+            </div>
+
+            <div class="tours-grid" id="tours-grid">
+                
+                <!-- Tour Card -->
+                
+                <!-- Card 1 -->
+                <div class="tour-card" data-region="europe">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/Greece.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>Greece Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$2,150.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            7 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+             <div class="tour-card" data-region="europe">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/Italy.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>Italy Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$1,890.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            6 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+             <div class="tour-card" data-region="europe">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/Switzerland.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>Switzerland Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$2,900.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            8 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+             <div class="tour-card" data-region="middle-east">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/Dubai.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>Dubai Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$1,650.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            5 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+             <div class="tour-card" data-region="asia">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/Thailand.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>Thailand Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$2,290.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            6 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+             <div class="tour-card" data-region="asia">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/China.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>China Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$2,150.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            7 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+             <div class="tour-card" data-region="middle-east">
+
+                    <div class="tour-img"
+                        style="background-image:url('images/Qatar.jpg')">
+                    </div>
+
+                    <div class="tour-content">
+
+                        <h3>Qatar Tour Package</h3>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                            <span>(5.0 Rating)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>$2,590.00</strong>/Person
+                        </div>
+
+                    </div>
+
+                    <div class="tour-footer">
+                        <span class="duration">
+                            <i class="far fa-clock"></i>
+                            9 Days
+                        </span>
+
+                        <a href="booking.html" class="book-link">
+                            Book Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+<footer class="footer">
+
+    <div class="footer-wrapper">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo-img">
+                <img
+                    src="images/logo.png"
+                    alt="Aura Travels Logo">
+            </a>
+
+            <p class="brand-text">
+                Crafting unforgettable journeys with luxury,
+                expertise, and personalized care. We curate
+                every detail to ensure your dream destination
+                is just a seamless booking away.
+            </p>
+
+            <div class="social-bar">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4 class="footer-heading">
+                Navigate
+            </h4>
+
+            <ul class="link-list">
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="destinations.html">Destinations</a>
+                </li>
+
+                <li>
+                    <a href="booking.html">Booking</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h4 class="footer-heading">
+                Connect
+            </h4>
+
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                Lahore, Pakistan
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                +92 300 1234567
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                info@auratravels.com
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>
+            &copy; 2026 Aura Travels. All Rights Reserved.
+        </p>
+    </div>
+
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,748 @@
+/* --- Hero Banner Section --- */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 85vh; 
+    min-height: 600px;
+    background: linear-gradient(rgba(18, 62, 76, 0.3), rgba(18, 62, 76, 0.6)), 
+                url('../images/Hero\ Image.avif') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 5%; 
+}
+.hero-content {
+    max-width: 800px;
+    color: var(--white);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px; 
+    letter-spacing: -1px;
+}
+
+/* Paragraph Styling */
+.hero-desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Hero Solid Button (Animated) --- */
+.btn-solid {
+    background: var(--logo-bg);
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Sliding Dark Teal Background */
+.btn-solid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-dark);
+    z-index: -1;
+    transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-solid:hover::before {
+    left: 0;
+}
+
+.btn-solid:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Keeps a very subtle shadow, no float */
+}
+
+.btn-solid i {
+    transition: transform 0.3s ease;
+}
+
+.btn-solid:hover i {
+    transform: translateX(5px);
+}
+
+/* --- Hero Outline Button --- */
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 16px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--white);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: border-color 0.4s ease; 
+}
+
+/* Sliding Cyan Background */
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--logo-bg);
+    z-index: -1;
+    transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-outline:hover::before {
+    left: 0;
+}
+
+.btn-outline:hover {
+    border-color: var(--logo-bg); 
+}
+
+.btn-outline i {
+    transition: transform 0.3s ease;
+}
+
+.btn-outline:hover i {
+    transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Mobile Adjustments */
+@media (max-width: 1100px) {
+    .hero-banner {
+        height: auto;
+        padding: 80px 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-subtitle {
+        font-size: 32px;
+    }
+    
+    .hero-desc {
+        margin: 0 auto 30px auto; 
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-solid, .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 40px;
+    }
+}
+
+/* --- Tour Categories Section --- */
+.tour-categories {
+    padding: 80px 5%;
+    background-color: #fafbfc; 
+    background-image: url('../images/Pattern.webp'); 
+    background-repeat: repeat; 
+    background-size: cover;
+    background-position: center;  
+    overflow: hidden; 
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 38px;
+    color: var(--btn-dark);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-title {
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--btn-dark);
+}
+
+.categories-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Crucial for staggering the whole card */
+    gap: 40px; 
+    max-width: 1500px; 
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.cat-card {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; 
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.cat-img {
+    width: 100%;
+    height: 290px; 
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px; /* Gives space so tilted corners don't hit the text */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+}
+
+.cat-card h3 {
+    color: var(--btn-dark);
+    font-size: 22px; 
+    font-weight: 700;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.cat-card:nth-child(1) { transform: translateY(40px); }
+.cat-card:nth-child(2) { transform: translateY(15px); }
+.cat-card:nth-child(3) { transform: translateY(0px); }
+.cat-card:nth-child(4) { transform: translateY(15px); }
+.cat-card:nth-child(5) { transform: translateY(40px); }
+
+.cat-card:nth-child(1) .cat-img { transform: rotate(-8deg); }
+.cat-card:nth-child(2) .cat-img { transform: rotate(-4deg); }
+.cat-card:nth-child(3) .cat-img { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+.cat-card:nth-child(4) .cat-img { transform: rotate(4deg); }
+.cat-card:nth-child(5) .cat-img { transform: rotate(8deg); }
+
+.cat-card:hover .cat-img {
+    transform: rotate(0deg) scale(1.1) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(30, 178, 207, 0.25); 
+    z-index: 10;
+}
+
+.cat-card:hover h3 {
+    color: var(--logo-bg);
+}
+
+/* Mobile Adjustments for category section */
+@media (max-width: 1100px) {
+    .categories-wrap {
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+        padding-bottom: 40px; 
+        scroll-snap-type: x mandatory; 
+        padding-top: 10px;
+        gap: 20px;
+    }
+
+    .tour-categories {
+    padding: 60px 5%;
+}
+
+    .categories-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cat-card {
+        min-width: 260px;
+        scroll-snap-align: center; 
+    }
+
+    .cat-card:nth-child(n) { transform: none; }
+    .cat-card:nth-child(n) .cat-img { transform: none; }
+
+    .cat-card:hover .cat-img {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 36px;
+    }
+    .section-subtitle {
+        font-size: 32px;
+    }
+    .tour-categories {
+    padding: 60px 5%;
+}
+}
+
+/* --- About Us Section --- */
+.about-section {
+    padding: 80px 5%;
+    background-color: var(--white);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+/* Left Side: Image Collage */
+.about-images {
+    flex: 1;
+    position: relative;
+    min-height: 550px;
+}
+
+.img-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.img-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.main-img {
+    width: 80%;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sub-img {
+    width: 55%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 10px solid var(--white); 
+    z-index: 2;
+}
+
+/* Floating Experience Badge */
+.experience-badge {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    background: var(--logo-bg);
+    color: var(--white);
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(30, 178, 207, 0.3);
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-badge .years {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.experience-badge .text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Right Side: Text Content */
+.about-content {
+    flex: 1;
+}
+
+.about-content .section-subtitle {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.about-content .section-title {
+    text-align: left;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.about-desc {
+    font-size: 17px;
+    color: var(--text-body);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Features Grid */
+.about-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.about-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.about-features li i {
+    color: var(--logo-bg);
+    font-size: 20px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1100px) {
+    .about-container {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .about-images {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .experience-badge {
+        left: 20px;
+        top: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-section{
+        padding: 60px 5%;
+    }
+
+    .about-images {
+        min-height: 400px;
+    }
+
+    .main-img {
+        height: 350px;
+    }
+
+    .sub-img {
+        height: 220px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr; /* Stacks features vertically on small screens */
+    }
+
+    .experience-badge {
+        padding: 15px 20px;
+        left: 10px;
+    }
+
+    .experience-badge .years {
+        font-size: 32px;
+    }
+}
+
+
+
+/* --- Popular Tours Section --- */
+.popular-tours {
+    padding: 80px 5%;
+    background-color: #f0f8fa; /
+    background-image: url('../images/Pattern.webp'); 
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px auto 0;
+}
+
+.tour-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.tour-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tour-content {
+    padding: 25px 20px 20px;
+    flex-grow: 1;
+}
+
+.tour-content h3 {
+    font-size: 20px;
+    color: var(--btn-dark);
+    margin-bottom: 12px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f59e0b; 
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating span {
+    color: var(--text-body);
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.price {
+    font-size: 14px;
+    color: var(--text-body);
+}
+
+.price strong {
+    font-size: 22px;
+    color: var(--btn-dark);
+    font-weight: 700;
+}
+
+.tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-light);
+    font-size: 14px;
+    color: var(--text-body);
+}
+
+.tour-footer .duration {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.book-link {
+    color: var(--btn-dark);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.book-link:hover {
+    color: var(--logo-bg);
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.section-footer .btn-solid {
+    margin: 0 auto;
+    width: max-content;
+}
+
+
+@media (max-width: 768px) {
+    .popular-tours {
+        padding: 60px 5%;
+}
+}
+    
+
+/* ---Testimonial Section --- */
+.testimonial-section {
+    padding: 80px 5%;
+    background-color: #fafbfc;
+}
+
+.slider-wrapper {
+    position: relative;
+    margin: 60px auto 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.testimonial-slider::-webkit-scrollbar { display: none; }
+
+.testi-card {
+    flex: 0 0 360px;
+    scroll-snap-align: start;
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.testi-card:hover { transform: translateY(-10px); }
+
+/* Navigation Arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--logo-bg);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    transition: background 0.3s ease;
+}
+
+.nav-arrow:hover { 
+    background: var(--btn-dark); 
+}
+.nav-arrow.prev { 
+    left: -60px; 
+}
+.nav-arrow.next { 
+    right: -60px; 
+}
+
+/* Internal Content Styles */
+.quote-icon { 
+    font-size: 24px; 
+    color: var(--logo-bg); 
+    margin-bottom: 20px; 
+    opacity: 0.4; 
+}
+.testi-text { 
+    font-size: 17px; 
+    line-height: 1.7; 
+    color: #555; 
+    margin-bottom: 30px; 
+}
+.testi-author { 
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    padding-top: 20px; 
+    border-top: 1px solid #eee; 
+}
+.testi-author img { 
+    width: 55px; 
+    height: 55px; 
+    border-radius: 12px; 
+    object-fit: cover; 
+}
+.author-info h4 { 
+    font-size: 16px; 
+    color: var(--btn-dark); 
+}
+.stars { 
+    color: #f59e0b; 
+    font-size: 11px; 
+}
+
+@media (max-width: 1024px) {
+    .nav-arrow { display: none; }
+}
+
+@media (max-width: 768px) {
+
+.testimonial-section {
+    padding: 40px 5%;
+}
+
+.testimonial-slider {
+    margin-top: -50px;
+}
+}
